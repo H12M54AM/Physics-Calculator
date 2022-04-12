@@ -140,6 +140,8 @@ func main() {
 			solveForEF()
 		default:
 			fmt.Println("Please enter one of the provided Options\n\t1. Ei\n\t2. w\n\t3. Ef")
+			fmt.Println("\nMade by Edward Naidoo - H12M54AM | Github")
+
 		}
 
 	case 8: //Tau = Force * Length
@@ -156,6 +158,7 @@ func main() {
 		tau = f * r
 
 		fmt.Println("\nYou got", tau, "Nm of Torque")
+		fmt.Println("\nMade by Edward Naidoo - H12M54AM | Github")
 
 	default:
 		fmt.Println("Please enter the chosen number..")
@@ -197,6 +200,8 @@ func solveForEI() {
 
 	Ei = Ef - W
 	fmt.Println("Energy Initial is", Ei, "Joules")
+	fmt.Println("\nMade by Edward Naidoo - H12M54AM | Github")
+
 }
 
 func solveForW() {
@@ -231,6 +236,8 @@ func solveForW() {
 
 	W = Ef - Ei
 	fmt.Println("Work is", W, "Joules")
+	fmt.Println("\nMade by Edward Naidoo - H12M54AM | Github")
+
 }
 
 func solveForEF() {
@@ -266,4 +273,6 @@ func solveForEF() {
 
 	Ef = Ei + W
 	fmt.Println("Energy Final is", Ef, "Joules")
+	fmt.Println("\nMade by Edward Naidoo - H12M54AM | Github")
+
 }
