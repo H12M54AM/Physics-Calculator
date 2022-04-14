@@ -10,7 +10,7 @@ func main() {
 	var choice int
 
 	fmt.Println("\nHello! Please choose the following Calculator!")
-	fmt.Println("\nWe have:\n\t1. vf = vi + at\n\t2. d = ((vi + vf) / 2) * t\n\t3. d = vi*t + 0.5 * a * t^2\n\t4. vf^2 = vi^2 + 2 * a * d\n\t5. Work = Force * Displacement\n\t6. eff = (output / input) * 100\n\t7. Ei + w = Ef\n\t8. Torque = F * r")
+	fmt.Println("\nWe have:\n\t1. vf = vi + at\n\t2. d = ((vi + vf) / 2) * t\n\t3. d = vi*t + 0.5 * a * t^2\n\t4. vf^2 = vi^2 + 2 * a * d\n\t5. Work = Force * Displacement\n\t6. eff = (output / input) * 100\n\t7. Ei + w = Ef\n\t8. Torque = F * r\n\t9. Fg = GMm/r^2")
 	fmt.Print("\nWhat would you like to use? : ")
 	fmt.Scan(&choice)
 
@@ -159,9 +159,30 @@ func main() {
 
 		fmt.Println("\nYou got", tau, "Nm of Torque")
 		fmt.Println("\nMade by Edward Naidoo - H12M54AM | Github")
+	
+	case 9: // gravatational problem
+		G := 6.67 * (math.Pow(10, -11))
+		var fg float64
+		var M float64
+		var m float64
+		var r float64
+
+		fmt.Print("What is the larger Mass or the first Mass? => ")
+		fmt.Scan(&M)
+
+		fmt.Print("What is the smaller Mass or the second Mass? => ")
+		fmt.Scan(&m)
+
+		fmt.Print("What is the distance or radius between your ", M, " kg mass and your ", m, "kg mass? => ")
+		fmt.Scan(&r)
+
+		fg = (G*M*m)/math.Pow(r, 2)
+
+		fmt.Println("The Gravitational Force between your 2 objects is ", fg)
+		fmt.Println("\nMade by Edward Naidoo - H12M54AM | Github")
 
 	default:
-		fmt.Println("Please enter the chosen number..")
+		fmt.Println("Please enter the provided options...")
 	}
 }
 
